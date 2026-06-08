@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000; /* Fundo preto destaca o gradiente */
+}
+
+h1{
+    font-size: 150px;
+    font-weight: 800;
+    text-transform: uppercase;
+    outline: none;
+    /* Criando o gradiente */
+    background: linear-gradient(135deg, #f06, #9f6, #06f, #f06);
+    background-size: 400% 400%; /* Aumenta o tamanho para permitir o movimento */
+    
+    /* Faz o gradiente aparecer apenas dentro das letras */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Aplicando a animação */
+    animation: animate 10s linear infinite;
+}
+
+/* Animação que move a posição do fundo gradiente */
+@keyframes animate {
+    0%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
